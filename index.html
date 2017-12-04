@@ -1,81 +1,400 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Dashboard</title>
+    <script src="https://use.fontawesome.com/21b158d175.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">    
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-  <!-- Nav Section -->
-    <nav class="nav-principal">
-      <div class="icon-user">
-        <a href="" target="_black"><img id="ale-profile" src="assets/images/ale-profile.png" alt=""></a><span id="user-name">Alejandra</span>
-      </div>
-      <div class="icon-list">
-        <ul>
-          <li><a href=""><i class="fa fa-home fa-lg" style="color:#333333;" aria-hidden="true"></i></a>Home</li>
-          <li><a href=""><i class="fa fa-briefcase" style="color:#333333;" aria-hidden="true"></i></a>Sprint</li>
-          <li><a href=""><i class="fa fa-area-chart" style="color:#333333;" aria-hidden="true"></i>Averages</a>
-            <ul>
-              <li><a href="">Tech</a></li>
-              <li><a href="">HSE</a></li>
-            </ul>
-          </li>
-          <li><a href=""><i class="fa fa-heart" style="color:#333333;" aria-hidden="true"></i></a>Fell-Lab</li>
-          <li><a href=""><i class="fa fa-bar-chart fa-1x" style="color:#333333;" aria-hidden="true"></i></a>Compara</li>
-          <li><a href=""><i class="fa fa-sign-out" style="color:#333333;" aria-hidden="true"></i></a>Sign-Out</li>
-        </ul>
-      </div>
-    </nav>
-    <!-- Header -->
     <header>
-      <section>
-        <div class="name-student">
-          <input autocomplete="" autofocus type="" placeholder="Ingrese nombre de la estudiante"checked>
-        </div>
-        <div class="img-logo">
-          <div>
-              <img id="log-dash" src="assets/images/logo-lab.png" alt="">
-          </div>
-            <div class="setting">
-                <a href=""><i class="fa fa-cog fa-spin fa-fw fa-lg" style="color:aliceblue;"></i><span class="sr-only">Loading...</span> Settings</a>
-            </div>
-          </div>
-      </section>
+      <ul class="remove-style">
+         <li><img class ="logo" src="assets/images/logo-laboratoria.svg" alt="logo"></li>
+         <li><a class="remove-underlined" href="#"><i id="icon-menu"class="fa fa-bars fa-2x" aria-hidden="true"></i></a></li>
+    </ul>
     </header>
-    <!--First Section-->		      
-    <section class="first-section">
-      <div class="list-sedes">		
-        <ul>	
-          <li id="container-sedes" class="cont-sedes">Sedes</li>		 
-          <li id="container-generations" class="hide"></li>		 
-        </ul>		
+      <div id="wrapper">
+        <nav>
+          <ul class="remove-style">
+            <li class="nav-sedes"><a class="remove-underlined"href="#">Arequipa<i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
+            <li class="nav-sedes"><a class="remove-underlined"href="#">Lima<i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
+            <li class="nav-sedes"><a class="remove-underlined"href="#">Santiago de Chile<i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
+            <li class="nav-sedes"><a class="remove-underlined"href="#">Ciudad de México<i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
+          </ul>
+        </nav>
+        <div class="total-data">
+          <button class="total-data-button"><i class="fa fa-line-chart" aria-hidden="true"></i> TOTAL DATA</button>
+        </div>
+        <main>
+          <div class="container">
+            <div class="selected-box">
+              <!-- <h2 class="inline-elements">Arequipa 2016-II</h2>
+              <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i> -->
+              <section class="first-section">
+                <select name="navbar" class="select" id="navbar">
+                  <option value="offices">Sedes</option>
+                  <option value="aq-2016-2">Arequipa 2016-II</option>
+                  <option value="aq-2017-1">Arequipa 2017-I</option>
+                  <option value="cm-2017-1">Ciudad de México 2017-I</option>
+                  <option value="cm-2017-2">Ciudad de México 2017-II</option>
+                  <option value="lm-2016-2">Lima 2016-II</option>
+                  <option value="lm-2017-1">Lima 2017-I</option>
+                  <option value="lm-2017-2">Lima 2017-II</option>
+                  <option value="ch-2016-2">Chile 2016-II</option>
+                  <option value="ch-2017-1">Chile 2017-I</option>
+                  <option value="ch-2017-2">Chile 2017-II</option>
+                </select>
+            </div>
+            <section>
+              <ul class="tabs remove-style">
+                <li class="inline-elements"><button class="tab"data-tab-selected="tabOverview">Overview</button></li>
+                <li class="inline-elements"><button class="tab"data-tab-selected="tabStudents">Students</button></li>
+                <li class="inline-elements"><button class="tab"data-tab-selected="tabTeachers">Teachers</button></li>
+              </ul>
+              <div>
+                <div id="container-overview"class="content">
+                   <div class="sections">
+                      <div class="graphic inline-elements chart">
+                        <div class="graphic-text">
+                          <h3>ENROLLMENT</h3>
+                          <div class="inline-elements data-boxes">122<div class="small-font"><br># STUDENTS CURRENTLY<br>ENROLLED</div></div>
+                          <div class="inline-elements data-boxes">53%<div class="small-font"><br>%DROPOUT</div></div>
+                        </div>
+                        <div id="column-enrollment"class="graphic-img">
+                        </div>
+                      </div>
+                      <div class="graphic inline-elements chart">
+                          <div class="graphic-text">
+                            <h3>ACHIEVEMENT</h3>
+                            <div class="inline-elements data-boxes">120<div class="small-font"><br># STUDENTS CURRENTLY<br>ENROLLED</div></div>
+                            <div class="inline-elements data-boxes">20%<div class="small-font"><br>%DROPOUT</div></div>
+                          </div>
+                          <div class="graphic-img">
+                            <img src="assets/images/graph.png" alt="graphic">
+                          </div>
+                        </div>
+                        <div class="graphic inline-elements chart">
+                            <div class="graphic-text">
+                              <h3>NET PROMOTER SCORE</h3>
+                              <div class="inline-elements data-boxes">120<div class="small-font"><br># STUDENTS CURRENTLY<br>ENROLLED</div></div>
+                              <div class="inline-elements data-boxes">20%<div class="small-font"><br>%DROPOUT</div></div>                       
+                            </div>
+                            <div id="nps-chart"class="graphic-img">
+                              <img src="assets/images/bar-graph.png" alt="graphic">
+                            </div>
+                          </div>
+                  </div>
+                  <div class="sections">
+                    <div class="graphic second-graph">
+                        <div>
+                          <h3 class="inline-elements">TECH SKILLS</h3>
+                          <select class=" select inline-elements" name="" id="">
+                            <option value="">TECH</option>
+                            <option value="">Common Core</option>
+                            <option value="">Javascript</option>
+                            <option value="">UX Design</option>
+                          </select>
+                        </div>
+                        <div>
+                            <div class="inline-elements data-boxes">120<div class="small-font"><br># STUDENTS CURRENTLY<br>ENROLLED</div></div>
+                            <div class="inline-elements data-boxes">20%<div class="small-font"><br>%DROPOUT</div></div>        
+                        </div>
+                        <div>
+                          <img src="assets/images/rectangular-graphic.png" alt="graphic">
+                          <img src="assets/images/circle-graphic.png" alt="graphic">
+                        </div>
+                    </div>
+                  </div> 
+                  <div class="sections">
+                      <div class="graphic second-graph">
+                          <div>
+                              <h3 class="inline-elements">LIFE SKILLS</h3>
+                              <select class="select inline-elements" name="" id="">
+                                <option selected>HSE</option>
+                                <option>Sprint 1</option>
+                                <option>Sprint 2</option>
+                                <option>Sprint 3</option>
+                                <option>Sprint 4</option>
+                              </select>
+                            </div>
+                            <div>
+                                <div class="inline-elements data-boxes">120<div class="small-font"><br># STUDENTS CURRENTLY<br>ENROLLED</div></div>
+                                <div class="inline-elements data-boxes">20%<div class="small-font"><br>%DROPOUT</div></div>        
+                            </div>
+                            <div>
+                              <img src="assets/images/rectangular-graphic.png" alt="graphic">
+                              <img src="assets/images/circle-graphic.png" alt="graphic">
+                            </div>
+                      </div>
+                  </div>
+                  <div class="sections">
+                      <div class="graphic inline-elements chart">
+                        <div class="graphic-text">
+                          <h3>STUDENTS SATISFACTION</h3>
+                          <div class="inline-elements data-boxes">89%<div class="small-font"><br>% MEETING OR EXCEEDING EXPECTATIONS</div></div>
+                        </div>
+                        <div id="satisfied-chart"class="graphic-img">
+                        </div>
+                      </div>
+                      <div class="graphic inline-elements chart">
+                          <div class="graphic-text">
+                            <h3>TEACHER RATING</h3>
+                            <div class="inline-elements data-boxes">3.9%<div class="small-font"><br>OVERALL TEACHER RATING</div></div>
+                          </div>
+                          <div id="graphic-teacher"class="graphic-img">
+                          </div>
+                        </div>
+                        <div class="graphic inline-elements chart">
+                            <div class="graphic-text">
+                              <h3>JEDI MASTER RATING</h3>
+                              <div class="inline-elements data-boxes">4.2%<div class="small-font"><br>OVERALL JEDI RATING</div></div>                   
+                            </div>
+                            <div id="graphic-jedi"class="graphic-img">
+                              
+                            </div>
+                          </div>
+                  </div>
+                </div>
+                <div id="container-students"class="content">
+                    <div class="specialization inline-elements">
+                        <div>
+                          <h3>SPECIALIZATION</h3>
+                          <ul class="remove-style">
+                            <li><input type="checkbox" name="" id="">Javascript</li>
+                            <li><input type="checkbox" name="" id="">UX Design</li>
+                            <li><input type="checkbox" name="" id="">Front-End</li>
+                          </ul>
+                        </div>   
+                    </div>
+                    <div class="students inline-elements">
+                        <form class="students-form"action=""><i class="fa fa-search" aria-hidden="true"></i>
+                          <input class="search-students"type="text">
+                        </form>
+                        <div class="container-students">
+                          <div class="arequipa-2017-2">
+                            <div class="student-data">
+                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
+                              <div class="inline-elements">
+                                <h1>DIANA NAVARRO</h1>
+                                <h2>Front-End Developer</h2>
+                                <div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
+                                </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="student-data">
+                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
+                              <div class="inline-elements">
+                                <h1>DIANA NAVARRO</h1>
+                                <h2>Front-End Developer</h2>
+                                <div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
+                                </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="student-data">
+                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
+                              <div class="inline-elements">
+                                <h1>DIANA NAVARRO</h1>
+                                <h2>Front-End Developer</h2>
+                                <div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
+                                </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="student-data">
+                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
+                              <div class="inline-elements">
+                                <h1>DIANA NAVARRO</h1>
+                                <h2>Front-End Developer</h2>
+                                <div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
+                                </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="student-data">
+                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
+                              <div class="inline-elements">
+                                <h1>DIANA NAVARRO</h1>
+                                <h2>Front-End Developer</h2>
+                                <div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
+                                </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="student-data">
+                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
+                              <div class="inline-elements">
+                                <h1>DIANA NAVARRO</h1>
+                                <h2>Front-End Developer</h2>
+                                <div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
+                                </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="student-data">
+                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
+                              <div class="inline-elements">
+                                <h1>DIANA NAVARRO</h1>
+                                <h2>Front-End Developer</h2>
+                                <div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
+                                </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="student-data">
+                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
+                              <div class="inline-elements">
+                                <h1>DIANA NAVARRO</h1>
+                                <h2>Front-End Developer</h2>
+                                <div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
+                                </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="student-data">
+                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
+                              <div class="inline-elements">
+                                <h1>DIANA NAVARRO</h1>
+                                <h2>Front-End Developer</h2>
+                                <div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
+                                </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="student-data">
+                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
+                              <div class="inline-elements">
+                                <h1>DIANA NAVARRO</h1>
+                                <h2>Front-End Developer</h2>
+                                <div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
+                                </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="student-data">
+                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
+                              <div class="inline-elements">
+                                <h1>DIANA NAVARRO</h1>
+                                <h2>Front-End Developer</h2>
+                                <div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
+                                </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="student-data">
+                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
+                              <div class="inline-elements">
+                                <h1>DIANA NAVARRO</h1>
+                                <h2>Front-End Developer</h2>
+                                <div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
+                                </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="student-data">
+                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
+                              <div class="inline-elements">
+                                <h1>DIANA NAVARRO</h1>
+                                <h2>Front-End Developer</h2>
+                                <div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
+                                </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="student-data">
+                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
+                              <div class="inline-elements">
+                                <h1>DIANA NAVARRO</h1>
+                                <h2>Front-End Developer</h2>
+                                <div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
+                                </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                            <div class="student-data"> 
+                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
+                              <div class="inline-elements">
+                                <h1>DIANA NAVARRO</h1>
+                                <h2>Front-End Developer</h2>
+                                <div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
+                                </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container-teachers"class="content">
+                    <div class="box-data">
+                        <div >
+                          <h3>TOTAL ALUMNAS</h3>
+                          <span>SEDE</span>
+                          <span>GENERACIÓN</span>
+                        </div>
+                        <div >
+                          
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
       </div>
-      <div class="container-paragraph">
-        <p class="paragraph">Total Students</p>
-      </div>
-      <div class="container-paragraph">
-        <p class="paragraph">Approved Students</p>
-      </div>
-      <div class="container-paragraph">
-        <p class="paragraph">Desertion Students</p>
-      </div>
-      <div class="container-paragraph">
-        <p class="paragraph">Download File</p>
-      </div>		        
-    </section>		   
-    <!--Second Section-->
-    <section class="grafhic">
-      <div class="grafhic-data">
-        <div id="piechart" style="width: 500px; height: 300px;"></div>
-        <div id="donutchart"  style="width: 500px; height: 300px;"></div>
-      </div>
-    </section>
+    <!-- GOOGLE CHARTS-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<!-- Base de datos -->
-    <script src="./js/data.js"></script>
+		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
