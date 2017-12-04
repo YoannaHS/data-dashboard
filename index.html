@@ -6,7 +6,8 @@
     <title>Data Dashboard</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://use.fontawesome.com/21b158d175.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">   
+    <link rel="stylesheet" href="css/main-1.css"> 
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -190,207 +191,87 @@
                         <form class="students-form"action=""><i class="fa fa-search" aria-hidden="true"></i>
                           <input class="search-students"type="text">
                         </form>
-                        <div class="container-students">
-                          <div class="arequipa-2017-2">
-                            <div class="student-data">
-                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
-                              <div class="inline-elements">
-                                <h1>DIANA NAVARRO</h1>
-                                <h2>Front-End Developer</h2>
-                                <div>
-                                    <div class="box-student inline-elements">96%</div>
-                                    <div class="box-student inline-elements">80%</div>
-                                    <div class="box-student inline-elements">40%</div>
-                                </div>
-                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                              </div>
+                        <div id="container-students">
+                            <!--Especialización-->
+                            <div id="especialization">
+                                <h3>Especialización</h3>
+                                <button type="button" id= "AQP" name="button">Arequipa</button>
+                                <button type="button" id= "CDMX" name="button">Mexico</button>
+                                <button type="button" id= "LIM" name="button">Lima</button>
+                                <button type="button" id= "SCL" name="button">Chile</button>
+                                <button class = "desactive" class="active" id="javascript-button" type="button" name="button"> Javascript</button> <br>
+                                <button class = "desactive" class="active" id="uxdesign-button" type="button" name="button"> Ux Design</button> <br>
+                                <button id="front-end-designer-button"  type="button"  name="button"> Front end Designer</button> <br>
+                                <br> <br> <br>
                             </div>
-                            <div class="student-data">
-                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
-                              <div class="inline-elements">
-                                <h1>DIANA NAVARRO</h1>
-                                <h2>Front-End Developer</h2>
-                                <div>
-                                    <div class="box-student inline-elements">96%</div>
-                                    <div class="box-student inline-elements">80%</div>
-                                    <div class="box-student inline-elements">40%</div>
+                            <!--Visualización-->
+                            <div id="visualization">
+                              <!-- Búsqueda de estudiantes -->
+                              <div id="content-search">
+                                <div id= "icon-search">
                                 </div>
-                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                              </div>
-                            </div>
-                            <div class="student-data">
-                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
-                              <div class="inline-elements">
-                                <h1>DIANA NAVARRO</h1>
-                                <h2>Front-End Developer</h2>
-                                <div>
-                                    <div class="box-student inline-elements">96%</div>
-                                    <div class="box-student inline-elements">80%</div>
-                                    <div class="box-student inline-elements">40%</div>
+                                <div id="input-students">
+                                    <input type="text" id="input-search">
                                 </div>
-                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                               </div>
-                            </div>
-                            <div class="student-data">
-                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
-                              <div class="inline-elements">
-                                <h1>DIANA NAVARRO</h1>
-                                <h2>Front-End Developer</h2>
-                                <div>
-                                    <div class="box-student inline-elements">96%</div>
-                                    <div class="box-student inline-elements">80%</div>
-                                    <div class="box-student inline-elements">40%</div>
+
+                              <!-- Visualiza estudiantes -->
+
+                              <div class="student">
+                                 <!--foto-->
+                                 <div class="photo">
+                                     <img src="assets/images/photos/maria.jpg" alt="">
+                                 </div>
+                                 <div class="date">
+                                    <!--datos de estudiante-->
+                                    <div class="date-student">
+                                      <div  class = "big-letter" class= "name" >DIANA NAVARRO</div>
+                                      <div class="especialization-student">Fronted Developer</div>
+                                    </div>
+                                    <!--evaluación técnica-->
+                                    <div class="tech-skills">
+                                      <div id="tech">
+                                        <label for="" class ="big-letter">95.6%</label>
+                                        <br>
+                                        <label for="" class="little-letter">TECH SKILLS</label>
+                                      </div>
+                                    </div>
+                                    <!--evaluación habilidades blandas-->
+                                    <div class="life-skills">
+                                      <div class="life">
+                                        <label for="" class ="big-letter">95.6%</label>
+                                        <br>
+                                        <label for="" class="little-letter">LIFE SKILLS</label>
+                                      </div>
+                                    </div>
+                                    <!--evaluación ingles-->
+                                    <div class="english-skills">
+                                        <div id="english">
+                                            <label for="" class ="big-letter">INTERN</label>
+                                            <br>
+                                            <label for="" class="little-letter">ENGLISH SKILLS</label>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <!--descripción de habilidades técnicas-->
+                                    <div class="skills-details" class="little-letter">
+                                        <div class="skill-1">Javascript</div>
+                                        <div class="skill-2">APIs</div>
+                                        <div class="skill-3">JQuery</div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <label for="">Ver perfil</label>
+                                    <span>i</span>
+
                                 </div>
-                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                                 <br>
+                                 <br>
                               </div>
-                            </div>
-                            <div class="student-data">
-                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
-                              <div class="inline-elements">
-                                <h1>DIANA NAVARRO</h1>
-                                <h2>Front-End Developer</h2>
-                                <div>
-                                    <div class="box-student inline-elements">96%</div>
-                                    <div class="box-student inline-elements">80%</div>
-                                    <div class="box-student inline-elements">40%</div>
-                                </div>
-                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                              </div>
-                            </div>
-                            <div class="student-data">
-                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
-                              <div class="inline-elements">
-                                <h1>DIANA NAVARRO</h1>
-                                <h2>Front-End Developer</h2>
-                                <div>
-                                    <div class="box-student inline-elements">96%</div>
-                                    <div class="box-student inline-elements">80%</div>
-                                    <div class="box-student inline-elements">40%</div>
-                                </div>
-                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                              </div>
-                            </div>
-                            <div class="student-data">
-                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
-                              <div class="inline-elements">
-                                <h1>DIANA NAVARRO</h1>
-                                <h2>Front-End Developer</h2>
-                                <div>
-                                    <div class="box-student inline-elements">96%</div>
-                                    <div class="box-student inline-elements">80%</div>
-                                    <div class="box-student inline-elements">40%</div>
-                                </div>
-                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                              </div>
-                            </div>
-                            <div class="student-data">
-                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
-                              <div class="inline-elements">
-                                <h1>DIANA NAVARRO</h1>
-                                <h2>Front-End Developer</h2>
-                                <div>
-                                    <div class="box-student inline-elements">96%</div>
-                                    <div class="box-student inline-elements">80%</div>
-                                    <div class="box-student inline-elements">40%</div>
-                                </div>
-                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                              </div>
-                            </div>
-                            <div class="student-data">
-                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
-                              <div class="inline-elements">
-                                <h1>DIANA NAVARRO</h1>
-                                <h2>Front-End Developer</h2>
-                                <div>
-                                    <div class="box-student inline-elements">96%</div>
-                                    <div class="box-student inline-elements">80%</div>
-                                    <div class="box-student inline-elements">40%</div>
-                                </div>
-                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                              </div>
-                            </div>
-                            <div class="student-data">
-                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
-                              <div class="inline-elements">
-                                <h1>DIANA NAVARRO</h1>
-                                <h2>Front-End Developer</h2>
-                                <div>
-                                    <div class="box-student inline-elements">96%</div>
-                                    <div class="box-student inline-elements">80%</div>
-                                    <div class="box-student inline-elements">40%</div>
-                                </div>
-                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                              </div>
-                            </div>
-                            <div class="student-data">
-                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
-                              <div class="inline-elements">
-                                <h1>DIANA NAVARRO</h1>
-                                <h2>Front-End Developer</h2>
-                                <div>
-                                    <div class="box-student inline-elements">96%</div>
-                                    <div class="box-student inline-elements">80%</div>
-                                    <div class="box-student inline-elements">40%</div>
-                                </div>
-                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                              </div>
-                            </div>
-                            <div class="student-data">
-                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
-                              <div class="inline-elements">
-                                <h1>DIANA NAVARRO</h1>
-                                <h2>Front-End Developer</h2>
-                                <div>
-                                    <div class="box-student inline-elements">96%</div>
-                                    <div class="box-student inline-elements">80%</div>
-                                    <div class="box-student inline-elements">40%</div>
-                                </div>
-                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                              </div>
-                            </div>
-                            <div class="student-data">
-                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
-                              <div class="inline-elements">
-                                <h1>DIANA NAVARRO</h1>
-                                <h2>Front-End Developer</h2>
-                                <div>
-                                    <div class="box-student inline-elements">96%</div>
-                                    <div class="box-student inline-elements">80%</div>
-                                    <div class="box-student inline-elements">40%</div>
-                                </div>
-                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                              </div>
-                            </div>
-                            <div class="student-data">
-                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
-                              <div class="inline-elements">
-                                <h1>DIANA NAVARRO</h1>
-                                <h2>Front-End Developer</h2>
-                                <div>
-                                    <div class="box-student inline-elements">96%</div>
-                                    <div class="box-student inline-elements">80%</div>
-                                    <div class="box-student inline-elements">40%</div>
-                                </div>
-                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                              </div>
-                            </div>
-                            <div class="student-data"> 
-                              <div class="inline-elements"><img src="http://1.bp.blogspot.com/_d8nplu_yuy8/SGKaj43husI/AAAAAAAAAI4/6IThZeqdHKo/s200/Foto+carnet.jpg" alt=""></div>
-                              <div class="inline-elements">
-                                <h1>DIANA NAVARRO</h1>
-                                <h2>Front-End Developer</h2>
-                                <div>
-                                    <div class="box-student inline-elements">96%</div>
-                                    <div class="box-student inline-elements">80%</div>
-                                    <div class="box-student inline-elements">40%</div>
-                                </div>
-                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                              </div>
+
                             </div>
                           </div>
-                        </div>
-                    </div>
-                </div>
                 <div id="container-teachers"class="content">
                     <div class="box-data">
                         <div >
@@ -414,5 +295,11 @@
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="js/app.js"></script>
+    <!-- Aquí va tus archivos JS -->
+    <script src="js/app.js"></script>
+    <!-- students data -->
+    <script src="./js/array-student-data.js"></script>
+    <!-- Funcionalidad -->
+    <script src="js/app-1.js"></script>
   </body>
 </html>
