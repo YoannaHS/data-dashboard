@@ -43,3 +43,12 @@ Con esta información logramos filtrar datos de mayor relevancia para nuestro cl
 
 ![](assets/recursos/wireframe.png)
 
+## Integrantes :
+- Araceli Gutarra
+- Betsy Lara
+- Betsy Vidal
+- Estephanie Hv
+- Geraldine Huamán
+- Yenny Quiñones
+- Yoana Ramirez
+
