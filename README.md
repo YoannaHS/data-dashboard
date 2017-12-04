@@ -35,7 +35,7 @@ Para poder optimizar su tiempo, las TMs han solicitado que construyamos una herr
 
 Para conocer las necesidades de los Training Managers y lograr que nuestro producto cubra las principales dificultades que tienen para poder seguir y visualizar el avance de las alumnas, le solicitamos a **Alejandra Ramirez** nos responda 6 preguntas claves:
 
-![](assets/recursos/entrevista.png)
+![](assets/images/entrevista.png)
 
 Con esta información logramos filtrar datos de mayor relevancia para nuestro cliente.
 
