@@ -4,21 +4,18 @@ window.addEventListener('load', function(event) {
 /* evento para botón de especialización javascript */
   var javascriptButton = document.getElementById('javascript-button');
   javascriptButton.addEventListener('click', function(event) {
-    alert('es click');
     button.classList.add('desactive');
   });
   /* evento para botón de especialización uxdesing */
   var uxdesignButton = document.getElementById('uxdesign-button');
   uxdesignButton.addEventListener('click', function(event) {
-    alert('es click en uxdesing');
   });
 
 
   /* evento para botón de especialización front end designer */
   var frontEndDesignerButton = document.getElementById('front-end-designer-button');
   frontEndDesignerButton.addEventListener('click', function(event) {
-    alert('es click en front end desing');
-    /* para recorrer el array students */
+  /* para recorrer el array students */
 
     for (var zz = 0 ; zz < 259 ; zz++) {
       /* ubico área para crear elementos */
