@@ -2,13 +2,79 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>Data Dashboard</title>
   </head>
   <body>
-
+  <!-- Nav Section -->
+    <nav class="nav-principal">
+      <div class="icon-user">
+        <a href="" target="_black"><img id="ale-profile" src="assets/images/ale-profile.png" alt=""></a><span id="user-name">Alejandra</span>
+      </div>
+      <div class="icon-list">
+        <ul>
+          <li><a href=""><i class="fa fa-home fa-lg" style="color:#333333;" aria-hidden="true"></i></a>Home</li>
+          <li><a href=""><i class="fa fa-briefcase" style="color:#333333;" aria-hidden="true"></i></a>Sprint</li>
+          <li><a href=""><i class="fa fa-area-chart" style="color:#333333;" aria-hidden="true"></i>Averages</a>
+            <ul>
+              <li><a href="">Tech</a></li>
+              <li><a href="">HSE</a></li>
+            </ul>
+          </li>
+          <li><a href=""><i class="fa fa-heart" style="color:#333333;" aria-hidden="true"></i></a>Fell-Lab</li>
+          <li><a href=""><i class="fa fa-bar-chart fa-1x" style="color:#333333;" aria-hidden="true"></i></a>Compara</li>
+          <li><a href=""><i class="fa fa-sign-out" style="color:#333333;" aria-hidden="true"></i></a>Sign-Out</li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Header -->
+    <header>
+      <section>
+        <div class="name-student">
+          <input autocomplete="" autofocus type="" placeholder="Ingrese nombre de la estudiante"checked>
+        </div>
+        <div class="img-logo">
+          <div>
+              <img id="log-dash" src="assets/images/logo-lab.png" alt="">
+          </div>
+            <div class="setting">
+                <a href=""><i class="fa fa-cog fa-spin fa-fw fa-lg" style="color:aliceblue;"></i><span class="sr-only">Loading...</span> Settings</a>
+            </div>
+          </div>
+      </section>
+    </header>
+    <!--First Section-->		      
+    <section class="first-section">
+      <div class="list-sedes">		
+        <ul>	
+          <li id="container-sedes" class="cont-sedes">Sedes</li>		 
+          <li id="container-generations" class="hide"></li>		 
+        </ul>		
+      </div>
+      <div class="container-paragraph">
+        <p class="paragraph">Total Students</p>
+      </div>
+      <div class="container-paragraph">
+        <p class="paragraph">Approved Students</p>
+      </div>
+      <div class="container-paragraph">
+        <p class="paragraph">Desertion Students</p>
+      </div>
+      <div class="container-paragraph">
+        <p class="paragraph">Download File</p>
+      </div>		        
+    </section>		   
+    <!--Second Section-->
+    <section class="grafhic">
+      <div class="grafhic-data">
+        <div id="piechart" style="width: 500px; height: 300px;"></div>
+        <div id="donutchart"  style="width: 500px; height: 300px;"></div>
+      </div>
+    </section>
 		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
+    <script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
   </body>
