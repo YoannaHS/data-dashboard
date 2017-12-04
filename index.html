@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Dashboard</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://use.fontawesome.com/21b158d175.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">    
     <link rel="stylesheet" href="css/main.css">
@@ -16,17 +17,34 @@
     </ul>
     </header>
       <div id="wrapper">
-        <nav>
+          <nav class="nav-principal">
+              <div class="icon-user">
+                <a href="" target="_black"><img id="ale-profile" src="assets/images/ale-profile.png" alt=""></a><span id="user-name">Alejandra</span>
+              </div>
+              <div class="icon-list">
+                <ul>
+                  <li><a href=""><i class="fa fa-home fa-lg" style="color:#333333;" aria-hidden="true"></i></a>Home</li>
+                  <li><a href=""><i class="fa fa-briefcase" style="color:#333333;" aria-hidden="true"></i></a>Sprint</li>
+                  <li><a href=""><i class="fa fa-area-chart" style="color:#333333;" aria-hidden="true"></i>Averages</a>
+                    <ul>
+                      <li><a href="">Tech</a></li>
+                      <li><a href="">HSE</a></li>
+                    </ul>
+                  </li>
+                  <li><a href=""><i class="fa fa-heart" style="color:#333333;" aria-hidden="true"></i></a>Fell-Lab</li>
+                  <li><a href=""><i class="fa fa-bar-chart fa-1x" style="color:#333333;" aria-hidden="true"></i></a>Compara</li>
+                  <li><a href=""><i class="fa fa-sign-out" style="color:#333333;" aria-hidden="true"></i></a>Sign-Out</li>
+                </ul>
+              </div>
+            </nav>
+        <!-- <nav>
           <ul class="remove-style">
             <li class="nav-sedes"><a class="remove-underlined"href="#">Arequipa<i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
             <li class="nav-sedes"><a class="remove-underlined"href="#">Lima<i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
             <li class="nav-sedes"><a class="remove-underlined"href="#">Santiago de Chile<i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
             <li class="nav-sedes"><a class="remove-underlined"href="#">Ciudad de México<i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
           </ul>
-        </nav>
-        <div class="total-data">
-          <button class="total-data-button"><i class="fa fa-line-chart" aria-hidden="true"></i> TOTAL DATA</button>
-        </div>
+        </nav> -->
         <main>
           <div class="container">
             <div class="selected-box">
