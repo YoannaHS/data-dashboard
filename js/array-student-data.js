@@ -97,7 +97,7 @@ students[[259, 15]] = 'SCL';
 /* consultas del array students*/
 var arrayAQP = [] ;
 var inda = 0;
-alert('entra aqui', students[[0, 0]]);
+
 for (var indx = 0 ; indx < students.length ; indx ++) {
   if (students[[indx, 2]] === true & students[[indx, 15]] === 'AQP') {
     arrayAQP[[inda, 0]] = students[[indx, 0]] ;
@@ -115,8 +115,6 @@ for (var indx = 0 ; indx < students.length ; indx ++) {
     arrayAQP[[inda, 13]] = students[[indx, 13]] ;
     arrayAQP[[inda, 14]] = students[[indx, 14]] ;
     arrayAQP[[inda, 15]] = students[[indx, 15]] ;
-  } else {
-    alert('no hay coincidencias');
   }
   inda = inda + 1;
 }

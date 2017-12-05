@@ -782,7 +782,7 @@ function drawChartEnrollment() {
     // var divText = document.getElementById('student');
     // var divPor = document.getElementById('student-dropout');
     // divPor.innerHTML = studentsDesert() + '% ';
-  
+
     data.addColumn('string', 'alumnas');
     data.addColumn('number', 'count');
     data.addRows(
@@ -797,14 +797,14 @@ function drawChartEnrollment() {
     var graphic = new google.visualization.ColumnChart(document.getElementById('column-enrollment'));
     graphic.draw(data, opciones);
   }
-  
+
   function drawPromJedi() {
     var data = new google.visualization.DataTable();
     // llamando el dato desde la funcion
     // var divText = document.getElementById('student');
     // var divPor = document.getElementById('jedi-dropout');
     // divPor.innerHTML = promJedi() + '% ';
-  
+
     data.addColumn('string', 'jedi');
     data.addColumn('number', 'prom');
     data.addRows(
@@ -821,14 +821,14 @@ function drawChartEnrollment() {
     var graphic = new google.visualization.LineChart(document.getElementById('graphic-jedi'));
     graphic.draw(data, opciones);
   }
-  
+
   function drawPromTeacher() {
     var data = new google.visualization.DataTable();
     // llamando el dato desde la funcion
     // var divText = document.getElementById('student');
     // var divPor = document.getElementById('student-dropout');
     // divPor.innerHTML = promTeacher() + '% ';
-  
+
     data.addColumn('string', 'teacher');
     data.addColumn('number', 'prom');
     data.addRows(
@@ -900,7 +900,7 @@ var showHide = function(e) {
 
     if(tabSelected === 'tabOverview') {
         console.log('This is overview section');
-        //ocultar students, teachers  
+        //ocultar students, teachers
         students.style.display ='none';
         teachers.style.display ='none';
         // mostrar solo overview
@@ -914,7 +914,7 @@ var showHide = function(e) {
         students.style.display ='block';
     }else if(tabSelected === 'tabTeachers') {
         console.log('This is teachers section');
-        //ocultar overview, students 
+        //ocultar overview, students
         overview.style.display ='none';
         students.style.display ='none';
         // mostrar solo teachers
@@ -925,7 +925,7 @@ var showHide = function(e) {
 var loadPage = function(){
     var overview = document.getElementById('container-overview');
     var students = document.getElementById('container-students');
-    var teachers = document.getElementById('container-teachers'); 
+    var teachers = document.getElementById('container-teachers');
     overview.style.display ='none';
     students.style.display ='none';
     teachers.style.display ='none';
