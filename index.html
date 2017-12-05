@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
     <title>Data Dashboard</title>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://use.fontawesome.com/21b158d175.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">   
-    <link rel="stylesheet" href="css/main-1.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">    
+    <link rel="stylesheet" href="css/main-1.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -18,34 +18,17 @@
     </ul>
     </header>
       <div id="wrapper">
-          <nav class="nav-principal">
-              <div class="icon-user">
-                <a href="" target="_black"><img id="ale-profile" src="assets/images/ale-profile.png" alt=""></a><span id="user-name">Alejandra</span>
-              </div>
-              <div class="icon-list">
-                <ul>
-                  <li><a href=""><i class="fa fa-home fa-lg" style="color:#333333;" aria-hidden="true"></i></a>Home</li>
-                  <li><a href=""><i class="fa fa-briefcase" style="color:#333333;" aria-hidden="true"></i></a>Sprint</li>
-                  <li><a href=""><i class="fa fa-area-chart" style="color:#333333;" aria-hidden="true"></i>Averages</a>
-                    <ul>
-                      <li><a href="">Tech</a></li>
-                      <li><a href="">HSE</a></li>
-                    </ul>
-                  </li>
-                  <li><a href=""><i class="fa fa-heart" style="color:#333333;" aria-hidden="true"></i></a>Fell-Lab</li>
-                  <li><a href=""><i class="fa fa-bar-chart fa-1x" style="color:#333333;" aria-hidden="true"></i></a>Compara</li>
-                  <li><a href=""><i class="fa fa-sign-out" style="color:#333333;" aria-hidden="true"></i></a>Sign-Out</li>
-                </ul>
-              </div>
-            </nav>
-        <!-- <nav>
+        <nav>
           <ul class="remove-style">
             <li class="nav-sedes"><a class="remove-underlined"href="#">Arequipa<i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
             <li class="nav-sedes"><a class="remove-underlined"href="#">Lima<i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
             <li class="nav-sedes"><a class="remove-underlined"href="#">Santiago de Chile<i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
             <li class="nav-sedes"><a class="remove-underlined"href="#">Ciudad de México<i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
           </ul>
-        </nav> -->
+        </nav>
+        <div class="total-data">
+          <button class="total-data-button"><i class="fa fa-line-chart" aria-hidden="true"></i> TOTAL DATA</button>
+        </div>
         <main>
           <div class="container">
             <div class="selected-box">
@@ -78,8 +61,8 @@
                       <div class="graphic inline-elements chart">
                         <div class="graphic-text">
                           <h3>ENROLLMENT</h3>
-                          <div class="inline-elements data-boxes">122<div class="small-font"><br># STUDENTS CURRENTLY<br>ENROLLED</div></div>
-                          <div class="inline-elements data-boxes">53%<div class="small-font"><br>%DROPOUT</div></div>
+                          <div id="total-students-container"class="inline-elements data-boxes">122<div class="small-font"><br># STUDENTS CURRENTLY<br>ENROLLED</div></div>
+                          <div id="percent-no-students-container"class="inline-elements data-boxes">53%<div class="small-font"><br>%DROPOUT</div></div>
                         </div>
                         <div id="column-enrollment"class="graphic-img">
                         </div>
@@ -97,8 +80,14 @@
                         <div class="graphic inline-elements chart">
                             <div class="graphic-text">
                               <h3>NET PROMOTER SCORE</h3>
-                              <div class="inline-elements data-boxes">120<div class="small-font"><br># STUDENTS CURRENTLY<br>ENROLLED</div></div>
-                              <div class="inline-elements data-boxes">20%<div class="small-font"><br>%DROPOUT</div></div>                       
+                              <div id="nps"class="inline-elements data-boxes">20%<div class="small-font"><br>CUMULATIVE NPS</div></div>
+                              <div class="inline-elements data-boxes">
+                                  <ul>
+                                    <li id="promoters">60 % promoters</li>
+                                    <li id="passive">30 % passive</li>
+                                    <li id="detractors">10 % detractors</li>
+                                  </ul>
+                              </div>                       
                             </div>
                             <div id="nps-chart"class="graphic-img">
                               <img src="assets/images/bar-graph.png" alt="graphic">
@@ -152,7 +141,7 @@
                       <div class="graphic inline-elements chart">
                         <div class="graphic-text">
                           <h3>STUDENTS SATISFACTION</h3>
-                          <div class="inline-elements data-boxes">89%<div class="small-font"><br>% MEETING OR EXCEEDING EXPECTATIONS</div></div>
+                          <div id="satisfied-students"class="inline-elements data-boxes">89%<div class="small-font"><br>% MEETING OR EXCEEDING EXPECTATIONS</div></div>
                         </div>
                         <div id="satisfied-chart"class="graphic-img">
                         </div>
@@ -160,7 +149,7 @@
                       <div class="graphic inline-elements chart">
                           <div class="graphic-text">
                             <h3>TEACHER RATING</h3>
-                            <div class="inline-elements data-boxes">3.9%<div class="small-font"><br>OVERALL TEACHER RATING</div></div>
+                            <div id="average-score-for-teachers"class="inline-elements data-boxes">3.9%<div class="small-font"><br>OVERALL TEACHER RATING</div></div>
                           </div>
                           <div id="graphic-teacher"class="graphic-img">
                           </div>
@@ -168,7 +157,7 @@
                         <div class="graphic inline-elements chart">
                             <div class="graphic-text">
                               <h3>JEDI MASTER RATING</h3>
-                              <div class="inline-elements data-boxes">4.2%<div class="small-font"><br>OVERALL JEDI RATING</div></div>                   
+                              <div id = "average-score-for-jedi"class="inline-elements data-boxes">4.2%<div class="small-font"><br>OVERALL JEDI RATING</div></div>                   
                             </div>
                             <div id="graphic-jedi"class="graphic-img">
                               
@@ -269,7 +258,6 @@
                                  <br>
                                  <br>
                               </div>
-
                             </div>
                           </div>
                 <div id="container-teachers"class="content">
@@ -294,8 +282,6 @@
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
-    <script src="js/app.js"></script>
-    <!-- Aquí va tus archivos JS -->
     <script src="js/app.js"></script>
     <!-- students data -->
     <script src="./js/array-student-data.js"></script>
